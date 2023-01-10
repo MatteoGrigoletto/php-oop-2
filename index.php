@@ -23,34 +23,35 @@ $shop = new Store('PetsMania');
 <div>
     <h1><?php echo $shop->nameStore  ?></h1>
 </div>
-<div>
-
+<section>
 <?php
 foreach($productList as $product){
 $prod = new Product($product);
 $prod->selectType($product);
 ?>
-<div class="img-card"></div>
+<div class="card">
+<div class="img-card">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE" alt="">
+</div>
 <div class="info-card">
-    <p> <?php echo $prod->name  ?></p>
-    <p> <?php echo $prod->price  ?></p>
-    <p> <?php echo $prod->tipology  ?></p>
-    <p> <?php echo $prod->category  ?></p>
+    <p>Name: <?php echo $prod->name  ?></p>
+    <p>Price: <?php echo $prod->price  ?></p>
+    <p>tipology:<?php echo $prod->tipology  ?></p>
+    <p>category: <?php echo $prod->category  ?></p>
     <p> <?php echo $prod->calories  ?></p>
     <p> <?php echo $prod->size  ?></p>
-    <p> <?php echo $prod->width ?></p>
+    <p><?php echo $prod->width ?></p>
     <p> <?php echo $prod->height  ?></p>
-    <p> <?php echo $prod->material  ?></p>
+    <p><?php echo $prod->material  ?></p>
     <p> <?php echo $prod->sound  ?></p>
 
 </div>
-
-
+</div>
 <?php } ?>
 
 
-</div>
 
-    
+</section>
+
 </body>
 </html>
