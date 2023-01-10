@@ -8,8 +8,8 @@ img {
   width: 100%;
 }
 body {
-  background-color: black;
   color: white;
+  background-color: rgb(12, 12, 12);
 }
 section {
   height: 100vh;
@@ -24,6 +24,4 @@ section {
   border-radius: 20px;
   margin: 20px;
   text-align: center;
-}
-.info-card {
 }

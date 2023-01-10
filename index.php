@@ -26,7 +26,7 @@ $shop = new Store('PetsMania');
 <section>
 <?php
 foreach($productList as $product){
-$prod = new Product($product);
+$prod = new Product($shop,$product);
 $prod->selectType($product);
 ?>
 <div class="card">
@@ -52,6 +52,5 @@ $prod->selectType($product);
 
 
 </section>
-
 </body>
 </html>
