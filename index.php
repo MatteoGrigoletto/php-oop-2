@@ -52,6 +52,5 @@ $prod->selectType($product);
 
 
 </section>
-<?php   var_dump($prod) ?>
 </body>
 </html>

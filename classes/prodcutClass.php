@@ -2,7 +2,7 @@
 
 
 class Product extends Store {
-use NameItem;
+
 
     public $name;
     public $price;
