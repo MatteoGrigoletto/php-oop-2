@@ -31,7 +31,7 @@ $prod->selectType($product);
 ?>
 <div class="card">
 <div class="img-card">
-    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE" alt="">
+    <img src="<?php echo $prod-> logo ?>" alt="">
 </div>
 <div class="info-card">
     <p>Name: <?php echo $prod->name  ?></p>
@@ -52,5 +52,6 @@ $prod->selectType($product);
 
 
 </section>
+<?php   var_dump($prod) ?>
 </body>
 </html>
