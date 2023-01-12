@@ -1,18 +1,11 @@
-<?php 
-
-trait NameItem {
-protected $name;
-public function getName(){
-return $this->name;
+<?php
+trait NameItem{
+    private $name;
+ 
+    public function setName($_name){
+        $this->name=$_name;
+    }
+    public function getName(){
+        return $this->name;
+    }
 }
-public function setName($name){
-$this->name = $name;
-}
-}
-
-
-
-
-
-
-?>

@@ -1,58 +1,25 @@
-<?php 
-
-$productList =
-array (
-    array('nome' => 'edgard Cooper',
-            'prezzo' => '80 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'cibo', 
-            'categoria' => 'cane',
-            'calorie' => '500 calorie',
-            'taglia' => 'taglia grande'
-         ),
-    array('nome' => 'one',
-            'prezzo' => '3 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'cibo', 
-            'categoria' => 'gatto',
-            'calorie' => '200 calorie',
-            'taglia' => 'taglia piccola',
-        ),
-    array('nome' => 'Cooper',
-            'prezzo' => '40 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'cuccia', 
-            'categoria' => 'cane',
-            'larghezza' => 'Larghezza: 120cm',
-            'altezza' => 'altezza: 120cm'),
-    array('nome' => 'Pallina',
-            'prezzo' => '110 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'giochi', 
-            'categoria' => 'cane',
-            'materiale' => 'Materiale: plastica',
-            'rumoroso' => 'Rumoroso: si'),
-    array('nome' => 'Coo',
-            'prezzo' => '43 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'cibo', 
-            'categoria' => 'cane',
-            'calorie' => '300 calorie',
-            'taglia' => ' taglia: media',),
-    array('nome' => 'edgard',
-            'prezzo' => '200 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'cuccia', 
-            'categoria' => 'cane',
-            'larghezza' => 'Larghezza: 200cm',
-            'altezza' => 'Altezza: 200cm'),
-    array('nome' => 'Cooper',
-            'prezzo' => '30 $',
-            'logo'=> 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQovdvZcVmUCGv7zMIE-D8mQL4hnQhFl9cF78G7L3xp2EP-dXWQTf96-b5VskWsmY3NprpvUKXo_YkO4KHJPqrVC1_8-8wWxgD9-fYbsgszSx8JKTg2gdqU2w&usqp=CAE', 
-            'tipologia' => 'giochi', 
-            'categoria' => 'cane',
-            'materiale' => 'Materiale: legno',
-            'rumoroso' => 'Rumoroso: no'),
-   );
-
-?>
+<?php
+require_once __DIR__."/classes/product.php";
+require_once __DIR__."/classes/category.php";
+$categories=[
+    $dog=new Category("Dog","<i class=\"fa-solid fa-dog\"></i>"),
+    $cat=new Category("Cat","<i class=\"fa-solid fa-cat\"></i>"),
+];
+$products=[
+    new Accessory("img/71xNkAf2olL._AC_SX522_.jpg","Bowl",12.33, $dog,"Inox Steel","Diameter: 30 cm"),
+    new Accessory("img/collare-in-cuoio-cane_600x.webp","Leash",15.99, $dog,"Leather","Circumference: 26 cm"),
+    new Toy("img/61woyXHXf+L._AC_SY355_.jpg","Peluche",7.99,$dog,"Sponge"),
+    new Toy("img/71TIQiusW2L._AC_SX522_.jpg","Rolling Catnip Ball",20.99,$cat,"Catnip"),
+    new Food("img/8007520023344_m0nejvu2virrkuqy.jpg","Dog Treats",5.99,$dog,"22/07/25"),
+    new Food("img/1.webp","Kibble for Cats",5.99,$cat,"02/12/23")
+];
+try{
+    $products[5]->setIngredients(["Salmon"]);
+}catch(Exception $e){
+    echo "Error:".$e->getMessage(); die;
+}
+try{
+    $products[4]->setIngredients(["Chicken","Pork","Vegetables"]);
+}catch(Exception $e){
+    echo "Error:".$e->getMessage(); die;
+}
